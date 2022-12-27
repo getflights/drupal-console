@@ -49,10 +49,10 @@
         "drupal/console-core": "^1.9.8",
         "drupal/console-extend-plugin": "~0.9.5",
         "psy/psysh": "0.6.* || ~0.8",
-        "symfony/expression-language": "~3.0|~4.0",
-        "symfony/css-selector": "~3.0|~4.0",
-        "symfony/dom-crawler": "~3.0|~4.0",
-        "symfony/http-foundation": "~3.0|~4.0"
+        "symfony/expression-language": "~3.0|~4.0|^6.0",
+        "symfony/css-selector": "~3.0|~4.0|^6.0",
+        "symfony/dom-crawler": "~3.0|~4.0|^6.0",
+        "symfony/http-foundation": "~3.0|~4.0|^6.0"
     },
     "suggest": {
         "symfony/thanks": "Thank your favorite PHP projects on GitHub using the CLI",
@@ -63,7 +63,11 @@
     ],
     "config": {
         "bin-dir": "bin/",
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/console-extend-plugin": true
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
